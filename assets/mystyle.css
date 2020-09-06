@@ -27,6 +27,9 @@ html{
   font-family: SourceSansPro;
   background-color: #FAECC3;
 }
+body{
+  margin: 0;
+}
 #container {
   display: flex;
   flex-wrap: wrap;
@@ -35,6 +38,8 @@ html{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 50%;
+  min-width: 350px;
 }
 #instagram{
   background-color: black;
@@ -49,13 +54,18 @@ html{
   font-family: Ikaros;
   font-weight: 600;
   font-size: 40px;
+  margin: 10px;
 }
 
+#text {
+  margin: 0 10px;
+  text-align: justify;
+}
 #images{
-  margin: 10px;
   width: 50%;
   height: auto;
   position: relative;
+  left: 0;
 }
 #image1{
   position: absolute;
@@ -84,6 +94,15 @@ html{
   animation-delay: 8s;
 }
 
+#logo{
+  width: 350px;
+  height: auto;
+}
+
+a{
+  margin: 5px 10px;
+}
+
 @keyframes imagesfade{
   0% {
     opacity:1;
@@ -99,5 +118,20 @@ html{
   }
   100% {
     opacity:1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #subcontainer {
+    width: 100%;
+    max-width: unset;
+  }
+  #logo{
+    width: 100%;
+  }
+
+  #images{
+    margin-top: 10px;
+    width: 100%;
   }
 }
