@@ -25,14 +25,16 @@
 
 html{
   font-family: SourceSansPro;
-  background-color: #f0f0f0;
+  background-color: #FAECC3;
 }
 #container {
   display: flex;
+  flex-wrap: wrap;
 }
 #subcontainer{
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 #instagram{
   background-color: black;
@@ -47,4 +49,55 @@ html{
   font-family: Ikaros;
   font-weight: 600;
   font-size: 40px;
+}
+
+#images{
+  margin: 10px;
+  width: 50%;
+  height: auto;
+  position: relative;
+}
+#image1{
+  position: absolute;
+  left: 0;
+  animation-name: imagesfade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+}
+#image2{
+  position: absolute;
+  left: 0;
+  animation-name: imagesfade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  animation-delay: 4s;
+}
+#image3{
+  position: absolute;
+  left: 0;
+  animation-name: imagesfade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  animation-delay: 8s;
+}
+
+@keyframes imagesfade{
+  0% {
+    opacity:1;
+  }
+  25% {
+    opacity:1;
+  }
+  33% {
+    opacity:0;
+  }
+  91% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
